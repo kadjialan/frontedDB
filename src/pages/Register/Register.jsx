@@ -1,9 +1,13 @@
-import React from 'react';
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
+import register from '../../api/auth';
 
 function Register() {
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,8 +20,12 @@ function Register() {
       password: target.password.value,
       passwordConfirmation: target.passwordConfirmation.value,
     };
-
-    console.log(data);
+    if (data.password === data.passwordConfirmation) {
+      await register(data);
+      navigate('/');
+    } else {
+      setShow(true);
+    }
   };
   return (
     <div className="home">
@@ -59,6 +67,7 @@ function Register() {
               required
             />
             <button type="submit">Create Account</button>
+            {show && <p>password confirmation failed</p>}
             <div className="account">
               <h3>
                 <i>Already have an account</i>

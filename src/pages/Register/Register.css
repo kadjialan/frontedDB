@@ -60,6 +60,10 @@ h1 {
   cursor: pointer;
 }
 
+.register p {
+  color: red;
+}
+
 .account {
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@ h1 {
   color: #fff;
 }
 
-.fa-solid {
+.login .fa-solid {
   color: #e79214;
   font-size: 40px;
 }
@@ -25,7 +25,7 @@ h1 {
   background-position: right;
   background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: flex-start;
   overflow-y: hidden;

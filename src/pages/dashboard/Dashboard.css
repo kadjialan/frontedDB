@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.dashboard {
+  background-image: url('../../images/drink.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #042331;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    line-height: 70px;
+    background-color: #063146;
+}
+
+.user span {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.identifier {
+    font-style: italic;
+}

@@ -32,18 +32,18 @@ nav {
   border-radius: 15px 7px;
 }
 
-.login {
+ .login {
   background-image: url('../../images/drink.png');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   overflow-y: hidden;
   position: relative;
-}
+} 
  
 
 .form {

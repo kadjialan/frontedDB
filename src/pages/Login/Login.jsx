@@ -1,8 +1,13 @@
-import React from 'react';
+/* eslint-disable no-shadow */
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { login } from '../../api/auth';
+import { saveToken } from '../../utils';
 import './Login.css';
 
 function Login() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -13,7 +18,19 @@ function Login() {
       password: target.password.value,
     };
 
-    console.log(user);
+    setIsLoading(true);
+    setError('');
+    try {
+      const { data } = await login(user.emailAddress, user.password);
+      saveToken(data.token);
+      navigate('/dashboard');
+    } catch (e) {
+      if (e.response.status === 401) {
+        setError('Invalid username or password');
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div className="login">
@@ -28,11 +45,15 @@ function Login() {
           <button type="button" onClick={() => navigate('/register')}>
             sign up
           </button>
-          <button type="button">guest</button>
+          <button type="button" onClick={() => navigate('/dashboard')}>
+            guest
+          </button>
         </div>
       </nav>
 
       <div className="form">
+        {isLoading && <p>Loading...</p>}
+        {error && <p className="error">{error}</p>}
         <div className="register">
           <form onSubmit={handleSubmit}>
             <h1>

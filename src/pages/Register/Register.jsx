@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
-import register from '../../api/auth';
+import { register } from '../../api/auth';
 
 function Register() {
   const navigate = useNavigate();

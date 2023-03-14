@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   color: #fff;
+  list-style: none;
+  text-decoration: none;
 }
 
 .dashboard {
@@ -14,6 +16,21 @@
   flex-direction: column;
 }
 
+.dashboard h2 {
+  background-color: #063146;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: oblique;
+}
+
+.dashboard input {
+  margin: 10px;
+  cursor: pointer;
+}
+
 .sidebar {
   position: fixed;
   width: 250px;
@@ -24,18 +41,53 @@
 }
 
 .user {
-    display: flex;
-    align-items: center;
-    line-height: 70px;
-    background-color: #063146;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #151e22;
+  position: relative;
+}
+
+
+.fa-user {
+  background-color: rgb(136, 132, 132);
+  padding: 15px;
+  border-radius: 50%;
 }
 
 .user span {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 85%;
+  justify-content: space-between;
 }
 
 .identifier {
-    font-style: italic;
+  font-style: italic;
+}
+
+.content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+ul {
+    margin-bottom: 15px;
+}
+
+.end {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: flex-end;
+    font-size: 22px;
+    justify-content: center;
+    margin: 10px;
 }

@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getCurrentUser } from '../../api/auth';
 import './Dashboard.css';
 
 function Dashboard() {
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    getCurrentUser().then(setUser);
+  });
   return (
     <div className="dashboard">
       <div className="sidebar">
@@ -10,9 +16,9 @@ function Dashboard() {
             <i className="fa-solid fa-user" />
             <div className="identifier">
               <p>
-                <b>kadji alan</b>
+                {user?.firstName} {user?.lastName}
               </p>
-              <p>alankadji@gmail.com</p>
+              <p>{user?.emailAddress}</p>
             </div>
           </span>
         </div>
@@ -65,19 +71,19 @@ function Dashboard() {
           <ul>
             <li>
               <input type="checkbox" />
-              Mais
+              Corn flour
             </li>
             <li>
               <input type="checkbox" />
-              Champagne
+              Fruits
             </li>
             <li>
               <input type="checkbox" />
-              Whisky
+              yeast
             </li>
             <li>
               <input type="checkbox" />
-              Juice
+              sugar
             </li>
             <li>
               <input type="checkbox" />
@@ -85,9 +91,22 @@ function Dashboard() {
             </li>
             <li>
               <input type="checkbox" />
-              Tea
+              Caffeine
             </li>
           </ul>
+
+          <h2>Alcoholic</h2>
+          <ul>
+            <li>
+              <input type="checkbox" />
+              Yes
+            </li>
+            <li>
+              <input type="checkbox" />
+              No
+            </li>
+          </ul>
+
           <div className="end">
             <i className="fa-solid fa-right-from-bracket" />
             <p>log out</p>

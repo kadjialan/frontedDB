@@ -11,3 +11,7 @@ export function login(username, password) {
 export function getCurrentUser() {
   return httpClient.get('current-user').then(({ data }) => data);
 }
+
+export function updateUser(update) {
+  return httpClient.patch(`users/${update.id}`, update);
+}

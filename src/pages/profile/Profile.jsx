@@ -1,35 +1,65 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getCurrentUser, updateUser } from '../../api/auth';
+
 import './Profile.css';
 
 function Profile() {
+  const [edit, setEdit] = useState();
+
+  useEffect(() => {
+    getCurrentUser().then(setEdit);
+  });
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const { target } = e;
+    const update = {
+      id: edit.id,
+      firstName: target.firstName.value,
+      lastName: target.lastName.value,
+      phone: target.phone.value,
+    };
+    console.log(update);
+    updateUser(update);
+  };
   return (
     <div className="dashboard">
       <div className="profile">
-        <span>
-          <i className="fa-solid fa-user-secret" />
-        </span>
-        <form>
+        <form onSubmit={handleUpdate}>
+          <span>
+            <i className="fa-solid fa-user-secret" />
+          </span>
           <input
             type="text"
-            placeholder="First Name"
+            placeholder={edit?.firstName}
             name="firstName"
             required
           />
-          <input type="text" placeholder="Last Name" name="lastName" required />
           <input
+            type="text"
+            placeholder={edit?.lastName}
+            name="lastName"
+            required
+          />
+          <input
+            className=" disabled"
             type="email"
-            placeholder="Email Address"
+            placeholder={edit?.emailAddress}
             name="emailAddress"
-            required
+            disabled
           />
-          <input type="phone" placeholder="Phone Number" name="phone" />
+          <input type="phone" placeholder={edit?.phone} name="phone" required />
           <input
+            className=" disabled"
             type="password"
-            placeholder="Password"
-            name="password"
-            required
+            placeholder={edit?.apikey}
+            name="apikey"
+            disabled
           />
-          <button type="submit">Update Account</button>
+          <div className="actions-buttons">
+            <button type="submit">Update</button>
+            <button type="button">cancel</button>
+          </div>
         </form>
       </div>
     </div>

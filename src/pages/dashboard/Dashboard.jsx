@@ -11,7 +11,7 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <div className="sidebar">
-        <div className="user">
+        {/*         <div className="user">
           <span>
             <i className="fa-solid fa-user" />
             <div className="identifier">
@@ -21,7 +21,7 @@ function Dashboard() {
               <p>{user?.emailAddress}</p>
             </div>
           </span>
-        </div>
+        </div> */}
         <div className="content">
           <h2>Categories</h2>
           <ul>

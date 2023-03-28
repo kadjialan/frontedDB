@@ -1,0 +1,9 @@
+.dashboard {
+    background-image: url('../../images/drink.png');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }

@@ -1,0 +1,36 @@
+.home1 {
+  background-image: url('../../images/homeBG.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home1 nav {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__links {
+  width: 320px;
+ 
+  height: 50px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nav__links p {
+  padding: 0 8px;
+}
+
+.nav__links p:hover {
+  background-color: rgb(196, 62, 62);
+  height: 50px;
+  align-items: center;
+  display: flex;
+}

@@ -6,8 +6,8 @@
   text-decoration: none;
 }
 
-.dashboard {
-  background-image: url('../../images/drink.png');
+.home2 {
+  background-image: url('../../images/homeBG.jpg'); 
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 
-.dashboard h2 {
+.home2 h2 {
   background-color: #063146;
   width: 100%;
   height: 40px;
@@ -26,7 +26,7 @@
   font-style: oblique;
 }
 
-.dashboard input {
+.home2 input {
   margin: 10px;
   cursor: pointer;
 }
@@ -49,7 +49,6 @@
   background-color: #151e22;
   position: relative;
 }
-
 
 .fa-user {
   background-color: rgb(136, 132, 132);
@@ -80,15 +79,15 @@ li {
 }
 
 ul {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .end {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    align-items: flex-end;
-    font-size: 22px;
-    justify-content: center;
-    margin: 10px;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: flex-end;
+  font-size: 22px;
+  justify-content: center;
+  margin: 10px;
 }

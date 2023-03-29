@@ -17,7 +17,7 @@
 }
 
 .home2 h2 {
-  background-color: #063146;
+  background-color: #795548;
   width: 100%;
   height: 40px;
   display: flex;
@@ -31,13 +31,13 @@
   cursor: pointer;
 }
 
-.sidebar {
+.home2 .sidebar {
   position: fixed;
   width: 250px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #042331;
+  background-color: #706767;
   overflow-y: scroll;
 }
 
@@ -91,3 +91,28 @@ ul {
   justify-content: center;
   margin: 10px;
 }
+
+.fa-xmark {
+  position: absolute;
+  right: 0;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #1f1c1c;
+}
+
+.fa-ellipsis-vertical,
+.fa-bars {
+  font-size: 30px;
+  background-color: #0e0202;
+  padding: 8px;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.icons-holder {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 15px 15px ;
+}
+
+

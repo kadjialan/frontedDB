@@ -48,6 +48,7 @@ h1 {
   padding: 5px 10px;
   font-size: larger;
   box-sizing: border-box;
+  color: black;
 }
 
 .register button {

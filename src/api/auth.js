@@ -15,3 +15,7 @@ export function getCurrentUser() {
 export function updateUser(update) {
   return httpClient.patch(`users/${update.id}`, update);
 }
+
+export function findDrinks() {
+  return httpClient.get('drinks').then(({ data }) => data);
+}

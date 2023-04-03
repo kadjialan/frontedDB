@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { getCurrentUser, updateUser } from '../../api/auth';
 
 import './Profile.css';
 
 function Profile() {
+  const navigate = useNavigate();
   const [edit, setEdit] = useState();
 
   useEffect(() => {
@@ -19,7 +21,6 @@ function Profile() {
       lastName: target.lastName.value,
       phone: target.phone.value,
     };
-    console.log(update);
     updateUser(update);
   };
   return (
@@ -31,13 +32,13 @@ function Profile() {
           </span>
           <input
             type="text"
-            placeholder={edit?.firstName}
+            defaultValue={edit?.firstName}
             name="firstName"
             required
           />
           <input
             type="text"
-            placeholder={edit?.lastName}
+            defaultValue={edit?.lastName}
             name="lastName"
             required
           />
@@ -48,7 +49,12 @@ function Profile() {
             name="emailAddress"
             disabled
           />
-          <input type="phone" placeholder={edit?.phone} name="phone" required />
+          <input
+            type="phone"
+            defaultValue={edit?.phone}
+            name="phone"
+            required
+          />
           <input
             className=" disabled"
             type="password"
@@ -58,7 +64,9 @@ function Profile() {
           />
           <div className="actions-buttons">
             <button type="submit">Update</button>
-            <button type="button">cancel</button>
+            <button type="button" onClick={() => navigate('/dashboard')}>
+              cancel
+            </button>
           </div>
         </form>
       </div>

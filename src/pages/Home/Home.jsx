@@ -1,10 +1,18 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { findDrinks } from '../../api/auth';
 import './Home.css';
+import beer from '../../images/drink.png';
 
 function Home() {
-  const [see, setSee] = useState(false);
+  const [see, setSee] = useState(true);
+  const [drink, setDrinks] = useState();
+
+  useEffect(() => {
+    findDrinks().then(setDrinks);
+  }, []);
+  console.log(drink);
 
   return (
     <div className="home2">
@@ -109,6 +117,12 @@ function Home() {
           </div>
         </div>
       )}
+      <div className="drinks">
+        {/*         {drink?.map((pictures) => (
+          <img src={pictures.imageUrl} alt="beer" />
+        ))} */}
+        <img src={beer} alt="beer" />
+      </div>
     </div>
   );
 }

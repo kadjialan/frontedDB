@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { findDrinks } from '../../api/auth';
 import './Home.css';
-import beer from '../../images/drink.png';
 
 function Home() {
   const [see, setSee] = useState(true);
@@ -118,10 +117,14 @@ function Home() {
         </div>
       )}
       <div className="drinks">
-        {/*         {drink?.map((pictures) => (
-          <img src={pictures.imageUrl} alt="beer" />
-        ))} */}
-        <img src={beer} alt="beer" />
+        {drink?.map((pictures) => (
+          <div className="drinks-content">
+            <div className="bottle">
+              <img src={pictures.imageUrl} alt="beer" className="pic" />
+              <h3>{pictures.name}</h3>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

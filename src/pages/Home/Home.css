@@ -7,7 +7,7 @@
 }
 
 .home2 {
-  background-image: url('../../images/homeBG.jpg'); 
+  background-image: url('../../images/homeBG.jpg');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
@@ -47,7 +47,6 @@
   justify-content: center;
   min-height: 100px;
   background-color: #151e22;
-  position: relative;
 }
 
 .fa-user {
@@ -112,8 +111,47 @@ ul {
 .icons-holder {
   display: flex;
   justify-content: space-between;
-  margin-inline: 15px 15px ;
+  margin-inline: 15px 15px;
 }
 
+.drinks {
+  border: 3px solid red;
+  margin-left: 260px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 45px;
+}
 
+.bottle {
+  width: 16vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
+.drinks-content {
+  display: flex;
+}
+
+.pic {
+  width: 100%;
+  border-radius: 3px;
+  height: 400px;
+  margin: 10px;
+  background-color: #795548;
+  padding: 5px;
+}
+
+.drinks-content h3 {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(36, 35, 35);
+  border: 1px solid rgba(61, 51, 51, 0.936);
+  padding: 10px 0;
+}

@@ -17,7 +17,20 @@ function Home() {
     <div className="home2">
       <div className="icons-holder">
         <i className="fa-sharp fa-solid fa-bars" onClick={() => setSee(!see)} />
-        <i className="fa-solid fa-ellipsis-vertical" />
+        <div className="icons-holder-right">
+          <div className="icons-holder-text">
+            <i className="fa-solid fa-clone" />
+            <h3>actions</h3>
+          </div>
+
+          <div className="dropDown">
+            <ul>
+              <li>register</li>
+              <li>login</li>
+              <li>exist</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       {see && (

@@ -57,7 +57,7 @@ function Login() {
         <div className="register">
           <form onSubmit={handleSubmit}>
             <h1>
-              <i> Please login to your account</i>
+              <i>Login</i>
             </h1>
             <input
               type="email"

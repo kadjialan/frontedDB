@@ -99,13 +99,24 @@ ul {
   background-color: #1f1c1c;
 }
 
-.fa-ellipsis-vertical,
 .fa-bars {
   font-size: 30px;
   background-color: #0e0202;
   padding: 8px;
   width: fit-content;
   margin-top: 15px;
+}
+
+.icons-holder-right {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px;
+  width: fit-content;
+  margin-top: 15px;
+  background-color: #220909;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .icons-holder {
@@ -115,7 +126,6 @@ ul {
 }
 
 .drinks {
-  border: 3px solid red;
   margin-left: 260px;
   flex-wrap: wrap;
   display: flex;
@@ -143,6 +153,11 @@ ul {
   padding: 5px;
 }
 
+.icons-holder-text {
+  display: flex;
+  gap: 7px;
+}
+
 .drinks-content h3 {
   position: absolute;
   bottom: 0;
@@ -154,4 +169,42 @@ ul {
   background-color: rgb(36, 35, 35);
   border: 1px solid rgba(61, 51, 51, 0.936);
   padding: 10px 0;
+}
+
+/* .dropDown {
+  position: absolute;
+  right: 0;
+  margin-right: 27px;
+  margin-top: 80px;
+  background-color: #795548;
+  border-radius: 8px;
+  padding: 10px 20px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+} */
+
+.dropDown {
+  display: none;
+}
+
+.dropDown li {
+  font-weight: 500;
+}
+
+.dropDown li:hover {
+  background-color: #802b3c;
+  width: 70px;
+  padding: 3px;
+}
+
+.icons-holder-right:hover .dropDown {
+  display: block;
+  position: absolute;
+  background-color: #220909;
+  margin-top: 150px;
+  margin-left: -10px;
+  padding: 0 8px;
+  width: 80px;
 }

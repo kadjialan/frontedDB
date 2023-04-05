@@ -22,6 +22,7 @@ function Profile() {
       phone: target.phone.value,
     };
     updateUser(update);
+    navigate('/dashboard');
   };
   return (
     <div className="dashboard">

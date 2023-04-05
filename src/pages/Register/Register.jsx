@@ -33,7 +33,7 @@ function Register() {
         <div className="register">
           <form onSubmit={handleSubmit}>
             <h1>
-              <i> Please create your account</i>
+              <i>Create your account</i>
             </h1>
             <input
               type="text"

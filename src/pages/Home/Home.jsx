@@ -102,10 +102,6 @@ function Home() {
               </li>
               <li>
                 <input type="checkbox" />
-                Water
-              </li>
-              <li>
-                <input type="checkbox" />
                 Caffeine
               </li>
             </ul>
@@ -121,11 +117,6 @@ function Home() {
                 No
               </li>
             </ul>
-
-            <div className="end">
-              <i className="fa-solid fa-right-from-bracket" />
-              <p>Exist</p>
-            </div>
           </div>
         </div>
       )}

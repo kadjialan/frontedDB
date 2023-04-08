@@ -4,8 +4,8 @@
   background-position: right;
   background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /*   display: flex;
+  flex-direction: column; */
 }
 
 .dashboard h2 {
@@ -83,4 +83,39 @@ ul {
   font-size: 22px;
   justify-content: center;
   margin: 10px;
+}
+
+.admin {
+  position: absolute;
+  right: 0;
+  margin: 30px 50px 0 0;
+  padding: 10px 15px;
+  background-color: #003566;
+  border-radius: 5px;
+}
+
+.ingredient-table {
+  margin-left: 300px;
+  border: 1px solid red;
+  min-width: 500px;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.ingredient-table th {
+  background-color: blue;
+  border-bottom: 1px solid black;
+  border: 2px solid black;
+  padding: 12px 15px;
+}
+
+.ingredient-table tbody tr:nth-of-type(even) {
+  background-color: #023e8a;
+}
+
+
+td {
+  text-align: center;
+  border: 2px solid black;
+  padding: 25px 15px;
 }

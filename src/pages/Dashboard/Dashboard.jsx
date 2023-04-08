@@ -37,6 +37,31 @@ function Dashboard() {
           </div>
         </div>
       </div>
+      <h3 className="admin">ADMIN</h3>
+
+      <table className="ingredient-table">
+        <caption>ingredients</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Freecode Camp</td>
+            <td>Freecode Camp</td>
+          </tr>
+          <tr>
+            <td>Freecode Camp</td>
+            <td>Freecode Camp</td>
+          </tr>
+          <tr>
+            <td>Freecode Camp</td>
+            <td>Freecode Camp</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

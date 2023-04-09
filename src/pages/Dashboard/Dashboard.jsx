@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { getCurrentUser } from '../../api/auth';
+import { findIngredients, getCurrentUser } from '../../api/auth';
 import './Dashboard.css';
 
 function Dashboard() {
   const [user, setUser] = useState();
+  const [ingredient, setIngredient] = useState();
 
   useEffect(() => {
     getCurrentUser().then(setUser);
-  });
+    findIngredients().then(setIngredient);
+  }, []);
+  console.log(user);
+
+  /*   useEffect(() => {
+    findIngredients().then(setIngredient);
+  }, []); */
+  console.log(ingredient);
+
   return (
     <div className="dashboard">
       <div className="sidebar">
@@ -48,18 +57,21 @@ function Dashboard() {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {ingredient?.map((rum) => (
+            <tr>
+              <td> {rum?.name} </td>
+              <td> {rum?.description} </td>
+            </tr>
+          ))}
+
+          {/*           <tr>
             <td>Freecode Camp</td>
             <td>Freecode Camp</td>
           </tr>
           <tr>
             <td>Freecode Camp</td>
             <td>Freecode Camp</td>
-          </tr>
-          <tr>
-            <td>Freecode Camp</td>
-            <td>Freecode Camp</td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
     </div>

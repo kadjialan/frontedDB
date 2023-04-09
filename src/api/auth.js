@@ -19,3 +19,7 @@ export function updateUser(update) {
 export function findDrinks() {
   return httpClient.get('drinks').then(({ data }) => data);
 }
+
+export function findIngredients() {
+  return httpClient.get('ingredients').then(({ data }) => data);
+}

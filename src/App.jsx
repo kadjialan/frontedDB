@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AddIngredients from './pages/Actions/AddIngredients/AddIngredients';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Home from './pages/Home/Home';
 import Landing from './pages/Landing/Landing';
@@ -12,11 +13,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="login" element={<Login />} />
+          <Route path="dashboard" element={<Dashboard />}>
+            <Route path="ingredients" element={<AddIngredients />} />
+          </Route>
+          <Route path="register" element={<Register />} />
+          <Route path="home" element={<Home />} />
+          <Route path="profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </div>

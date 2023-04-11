@@ -1,0 +1,54 @@
+.addIngredients {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ingredient-table {
+  /*  margin-left: 300px; */
+  border-style: double;
+  width: 40%;
+  border-collapse: collapse;
+  font-size: 1em;
+}
+
+.ingredient-table th {
+  background-color: #56cfe1;
+  border-bottom: 1px solid black;
+  border: 2px solid black;
+  padding: 12px 15px;
+}
+
+.ingredient-table tbody tr:nth-of-type(even) {
+  background-color: #023e8a;
+}
+
+td {
+  text-align: center;
+  /*  border: 2px solid black; */
+ /*  padding: 25px 30px;  */
+}
+
+.table__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 30px;
+}
+
+.fa-trash-can {
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.fa-pen-to-square {
+  padding: 5px 10px;
+  background-color: blue;
+  border-radius: 5px;
+}

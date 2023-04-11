@@ -1,21 +1,17 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useState } from 'react';
-import { findIngredients, getCurrentUser } from '../../api/auth';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { getCurrentUser } from '../../api/auth';
 import './Dashboard.css';
 
 function Dashboard() {
   const [user, setUser] = useState();
-  const [ingredient, setIngredient] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getCurrentUser().then(setUser);
-    findIngredients().then(setIngredient);
   }, []);
-  console.log(user);
-
-  /*   useEffect(() => {
-    findIngredients().then(setIngredient);
-  }, []); */
-  console.log(ingredient);
 
   return (
     <div className="dashboard">
@@ -36,7 +32,7 @@ function Dashboard() {
 
           <h2>Glasses</h2>
 
-          <h2>Ingredients</h2>
+          <h2 onClick={() => navigate('ingredients')}>Ingredients</h2>
 
           <h2>Alcoholic</h2>
 
@@ -47,33 +43,8 @@ function Dashboard() {
         </div>
       </div>
       <h3 className="admin">ADMIN</h3>
-
-      <table className="ingredient-table">
-        <caption>ingredients</caption>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>description</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ingredient?.map((rum) => (
-            <tr>
-              <td> {rum?.name} </td>
-              <td> {rum?.description} </td>
-            </tr>
-          ))}
-
-          {/*           <tr>
-            <td>Freecode Camp</td>
-            <td>Freecode Camp</td>
-          </tr>
-          <tr>
-            <td>Freecode Camp</td>
-            <td>Freecode Camp</td>
-          </tr> */}
-        </tbody>
-      </table>
+      <Outlet />
+      {/*  <AddIngredients /> */}
     </div>
   );
 }

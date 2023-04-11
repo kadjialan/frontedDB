@@ -29,7 +29,7 @@
 .dashboard .sidebar {
   position: absolute;
   left: 0;
-  width: 250px;
+  width: 15vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -98,28 +98,4 @@ ul {
   border-radius: 5px;
 }
 
-.ingredient-table {
- /*  margin-left: 300px; */
-  border: 1px solid red;
-  min-width: 500px;
-  border-collapse: collapse;
-  font-size: 1em;
-  max-width: 300px;
-}
 
-.ingredient-table th {
-  background-color: #56cfe1;
-  border-bottom: 1px solid black;
-  border: 2px solid black;
-  padding: 12px 15px;
-}
-
-.ingredient-table tbody tr:nth-of-type(even) {
-  background-color: #023e8a;
-}
-
-td {
-  text-align: center;
-  border: 2px solid black;
-  padding: 25px 15px;
-}
